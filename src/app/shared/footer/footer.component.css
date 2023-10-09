@@ -1,0 +1,22 @@
+.footer {
+    background-color: #020609;
+    height: 300px;
+}
+.footer-text {
+    padding-top: 100px;
+}
+.footer-text p {
+    color: #cccccc;
+    font-size: 11px;
+}
+@media (max-width: 576px) {
+    .footer {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-text {
+        padding-top: 0;
+    }
+}

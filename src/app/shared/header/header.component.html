@@ -1,0 +1,45 @@
+<header [ngClass]="{'show': isNavShown}" class="fixed-nav">
+    <div class="header-contain pt-2 pb-lg-1 d-flex flex-lg-row flex-column justify-content-between">
+        <div class="d-flex d-lg-none justify-content-between ms-auto pe-2">
+            <img (click)="isNavShown = !isNavShown" class="navbar-img" src="./assets/list.svg" alt="">
+        </div>
+        <div class="d-flex align-items-end flex-lg-row flex-column flex-grow-1 nav-contain">
+            <ul class="d-flex flex-lg-row flex-column nav-items">
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'HOME'}" href="#home">HOME</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'ABOUT'}" href="#about">ABOUT</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'CREDENTIALS'}" href="#credentials">CREDENTIALS</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'LOCATIONS'}" href="#locations">LOCATIONS</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'MEDIAFACTS'}" href="#mediaFacts">MEDIA FACTS</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'NEWS'}" href="#news">NEWS</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'CAREERS'}" href="#careers">CAREERS</a>
+                    <span class="px-2">/</span>
+                </li>
+                <li>
+                    <a [ngClass]="{'current': scrollPos === 'CONTACT'}" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+            <div class="ms-4 mb-1 socials">
+                <img src="../../../assets/social.png">
+            </div>
+        </div>
+    </div>
+</header>

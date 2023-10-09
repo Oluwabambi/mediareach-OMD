@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center flex-wrap mb-2 mb-md-0">
+    <div *ngFor="let item of mediaFacts, let i = index;" class="years-sect pe-2 me-2 mb-1">
+        <p (click)="selectYear(item, i)" [ngClass]="{'selected': item.year === selected}" class="mb-0">{{item.year}}</p>
+    </div>
+</div>
+<div class="years-img-sect">
+    <div [ngStyle]="{'transform': 'translateY(' + translatePos + 'px)'}" *ngFor="let item of mediaFacts" class="d-flex flex-column flex-md-row years-card">
+        <div class="year-img d-flex">
+            <img [src]="item.imgUrl" alt="{{item.year}} facts">
+        </div>
+        <div class="px-md-4 px-0 year-details">
+            <h1>MEDIA FACTS FOR NIGERIA, WEST & CENTRAL AFRICA</h1>
+            <p class="fw-bold">{{item.year}}</p>
+            <button type="button">VIEW PDF</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.years-sect {
+    border-right: 1px solid #999999;
+}
+.years-sect p {
+    color: #999999;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1.2;
+    cursor: pointer;
+}
+.years-sect p.selected {
+    color: #F00F00;
+}
+.years-img-sect {
+    height: 410px;
+    overflow: hidden;
+}
+.years-card {
+    height: 410px;
+    transition: transform 0.6s;
+}
+.year-img {
+    background-color: #333333;
+    width: 55%;
+}
+.year-img img {
+    margin: auto;
+}
+.year-details {
+    width: 35%;
+}
+.year-details h1 {
+    font-size: 30px;
+    color: #333333;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.year-details button {
+    background-color: #e9221b;
+    border: none;
+    padding: 0.55rem 2.5rem;
+    border-radius: 6px;
+    color: #ffe5e6;
+    margin-top: 30px;
+}
+.year-details p {
+    color: #e90000;
+    font-size: 13px;
+}
+@media (max-width: 996px) {
+    .year-details {
+        width: 40%;
+    }
+}
+@media (max-width: 768px) {
+    .year-details {
+        width: 100%;
+    }
+    .year-details button {
+        margin-top: 15px;
+    }
+}

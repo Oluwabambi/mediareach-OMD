@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center flex-wrap mb-1">
+    <div *ngFor="let item of latestNews, let i = index;" class="news-sect pe-2 me-2 mb-1">
+        <p (click)="selectNews(item, i)" [ngClass]="{'selected': item.title === selected}" class="mb-0">{{item.title}}</p>
+    </div>
+</div>
+<div class="news-img-sect">
+    <div [ngStyle]="{'transform': 'translateY(' + translatePos + 'px)'}" *ngFor="let item of latestNews"
+        class="d-flex flex-md-row flex-column news-card">
+        <div class="news-img d-flex">
+            <img [src]="item.imgUrl" alt="{{item.title}} facts">
+        </div>
+        <div class="px-md-4 news-details overflow-auto">
+            <h1 class="mb-3 mt-2">LIST OF LOCAL AWARDS:</h1>
+            <ul>
+                <li class="fw-bold" *ngFor="let data of item.details" [innerHTML]="data?.description"></li>
+            </ul>
+        </div>
+    </div>
+</div>

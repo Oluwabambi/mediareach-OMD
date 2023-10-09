@@ -1,0 +1,28 @@
+<div class="container-fluid gallery-container gx-0">
+    <div class="row gal-pb">
+        <div *ngFor="let item of galleryItems; let i = index" class="col-md-4 col-sm-6 col-12 d-flex">
+            <div class="gallery-item d-flex flex-column">
+                <img class="w-100" [src]="item.imgUrl" alt="{{item.title}}">
+                <div class="gallery-body d-flex flex-column">
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.description}}</p>
+                    <span class="fw-bold" (click)="viewGallery(item.title, i)">VIEW GALLERY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pics-container row">
+        <div *ngFor="let item of galleryItems" [ngClass]="{'hide': prevLocations.includes(item.title)}" class="col-12 bg-white pics-card">
+            <p class="mb-2">{{item.title}} GALLERY</p>
+            <div class="pics-sect d-flex">
+                <!-- <div class="test"></div> -->
+                <div class="pics-sidebg"></div>
+                <img class="d-none d-md-block" [ngStyle]="{'transform' : 'translateX(' + translatePos + 'px)'}" *ngFor="let pic of item.items" [src]="pic.imgUrl" alt="{{item.title + ' gallery'}}">
+                <img class="d-md-none d-block" [ngStyle]="{'transform' : 'translateX(' + translatePos + '%)'}" *ngFor="let pic of item.items" [src]="pic.imgUrl" alt="{{item.title + ' gallery'}}">
+            </div>
+            <div class="d-flex gallery-nums">
+                <span (click)="scrollPics(num, i)" [ngClass]="{'selected': num == currentPicId}" class="me-1" *ngFor="let num of item.itemNums; let i = index">{{num}}</span>
+            </div>
+        </div>
+    </div>
+</div>
