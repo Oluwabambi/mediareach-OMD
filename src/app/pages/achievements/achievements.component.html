@@ -1,0 +1,22 @@
+
+<app-header></app-header>
+<div class="achievement-container">
+    <div class="achievement-sect">
+        <p class="top-title ms-4">ACHIEVEMENTS</p>
+        <div class="achievement-list">
+            <div *ngFor="let item of achievements" class="item d-flex align-items-start">
+                <img *ngIf="item.id <= 3" [src]="item.imgUrl" alt="{{item.title}}">
+                <div *ngIf="item.id > 3" class="bordered p-2">
+                    <img class="w-100" [src]="item.imgUrl" alt="{{item.title}}">
+                </div>
+                <div class="details">
+                    <h2>{{item.title}}</h2>
+                    <p class="fw-bold">{{item.years}}</p>
+                    <ul class="mt-2">
+                        <li *ngFor="let data of item.details" [innerHTML]="data?.description"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

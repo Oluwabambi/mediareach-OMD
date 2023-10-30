@@ -2,7 +2,7 @@ export const LATESTNEWS = [
   {
     id: 1,
     title: 'Latest Awards',
-    imgUrl: '../assets/news_21.jpg',
+    imgUrl: '../assets/news_21.jpeg',
     details: [
         {
             id: 1,
@@ -33,7 +33,7 @@ export const LATESTNEWS = [
     details: [
         {
             id: 1,
-            description: "Cannes Young Lions Media – mediaReach OMD remains the only media agency to represent Nigeria at the Cannes Young Lions Media <span class='l-year'>(2019, 2017, 2016, 2014, 2012, 2011, 2010, 2009, 2008)</span>",
+            description: "Cannes Young Lions Media – mediaReach OMD remains the only media agency to represent Nigeria at the Cannes Young Lions Media <span class='l-year'>(2022, 2021, 2019, 2017, 2016, 2014, 2012, 2011, 2010, 2009, 2008)</span>",
         },
         {
             id: 2,

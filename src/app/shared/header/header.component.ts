@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,12 @@ export class HeaderComponent implements OnInit {
   isNavShown: boolean = false;
 
 
-  constructor() { }
+  constructor( private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    if (this.route.snapshot.routeConfig?.path === "achievements") {
+      this.scrollPos = '';
+    }
   }
 
 }

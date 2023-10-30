@@ -1,0 +1,48 @@
+<div class="form-sect">
+    <h1>CAREERS</h1>
+    <div class="form-contain">
+        <p class="fhead mb-4">Ensuring we have the most strategic, analytical, innovative, energetic and genuine people
+            is priority one. Select a country from the menu to find local opportunities.</p>
+        <form [formGroup]="careersForm" class="row">
+            <div class="col-12 mb-2">
+                <label>Country*</label>
+                <select formControlName="country">
+                    <option value="" disabled></option>
+                    <option value="Nigeria" selected>Nigeria</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Cameroon">Cameroon</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-2">
+                <label>First Name*</label>
+                <input formControlName="firstName" type="text">
+            </div>
+            <div class="col-md-6 mb-2">
+                <label>Surname*</label>
+                <input formControlName="lastName" type="text">
+            </div>
+            <div class="col-12 mb-2">
+                <label>Email*</label>
+                <input formControlName="email" type="text">
+            </div>
+            <div class="col-12 mb-2">
+                <label>Mobile Number*</label>
+                <input formControlName="phoneNumber" type="text">
+            </div>
+            <div class="col-12 mb-2">
+                <label>Upload CV (PDF max size 5MB)</label>
+                <input (change)="onSelect($event)" type="file">
+            </div>
+            <div class="col-md-3 col-md-5 col-7 mb-3">
+                <label>Verification Code</label>
+                <div class="d-flex justify-content-between">
+                    <input formControlName="code" class="verify-inp-1" type="text">
+                    <input class="verify-inp-2" type="text" disabled value="89581">
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="careers-btn w-100" type="button">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>

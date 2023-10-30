@@ -1,0 +1,183 @@
+<app-header [scrollPos]="scrollPos"></app-header>
+<ul class="nav-dots">
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+  <li class="mb-1"><a href="#"><i class="nav-dot"></i></a></li>
+</ul>
+<div class="sect-01 d-flex align-items-center justify-content-center">
+    <div class="arrow bounce">
+        <a href="#home"></a>
+    </div>
+    <a class="mfb" href="https://www.mediafactsbook.com" target="_blank">
+        <img class="w-100 h-100" src="../assets/MFB_2021.png" alt="">
+    </a>
+</div>
+<div #sect02 id="home" class="sect-02 min-vh-100 d-flex align-items-center justify-content-center">
+  <img src="../assets/omd_logo.png" alt="">
+</div>
+<div class="sect-03"></div>
+<div #sect04 id="about" class="sect-04">
+  <div class="about-head mb-5">
+    <div class="wline"></div>
+    <p class="about-no mb-0">02</p>
+    <p class="about-title">ABOUT US</p>
+  </div>
+  <div class="about-sect">
+    <div class="about-01">
+      <h1>mediaReach OMD</h1>
+      <p>
+        mediaReach OMD is West and Central Africa’s No.1 independent media specialist. We are focused on developing & providing
+        world class media planning and buying services to leading international clients across this sub-region. Starting
+        operations in 1999, mediaReach OMD has grown to become the biggest media agency in West & Central Africa today.
+        <br><br>
+        The agency has given direction to the practice of media planning and buying in Nigeria and indeed the West & Central
+        African sub-region. In the first year of operation, mediaReach OMD revolutionized media practice in Nigeria by
+        initiating standards to ensure unprecedented high media compliance by media owners and prompt payments for placements
+        implemented. Within eighteen months of operation, mediaReach OMD led the industry in positive directions by championing
+        the launch of media planning data & tools. Proprietary tools launched and still in use today include ESPRI and Media
+        Star for effective and efficient media plans.
+      </p>
+    </div>
+    <div class="about-02 mt-4">
+      <p>
+        Since 2003, mediaReach OMD has also undertaken the publication of the West & Central African Media Facts Book – an
+        industry accepted data collection book about the West & Central African advertising scene and the only manual for media
+        advertising information in the regions.
+        <br>
+        <br>
+          With extraordinary media practice credentials in Nigeria and indeed West & Central Africa, mediaReach OMD is still
+          unsatisfied with these accomplishments and has continuously challenged the dynamics of the marketplace. Our desire to
+          leverage international work tools, talents and ideas led us to affiliate with OMD, the global media advertising company
+          of Omnicom in 2003. Omnicom is arguably the world's largest marketing communications network, with offices in over 80
+          countries. This affiliation places at our disposal the global capabilities of OMD to the benefit of our local &
+          international clients and their brands.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="sect-05"></div>
+<div #sect06 id="credentials" class="sect-06">
+  <img class="w-100" src="../assets/red.png" alt="">
+</div>
+<div class="sect-07"></div>
+<div class="sect-08">
+  <div class="triangle-down-08 start-50 translate-middle-x"></div>
+  <div class="pt-5 text-center head-08">
+    <h1>NUMBER ONE IN NIGERIA</h1>
+    <p>We have maintained the number One Position in the Nigeria market since 2002.</p>
+  </div>
+  <div class="cred-sect">
+    <div class="d-flex flex-column cred-imgs">
+      <img src="../assets/RECMA_Ghana.png" alt="">
+      <img src="../assets/RECMA_Nigeria.png" alt="">
+    </div>
+    <!-- <img class="w-100" src="../assets/credentials_latest3.jpg" alt=""> -->
+  </div>
+</div>
+<div class="sect-09">
+  <div class="ach-sect">
+    <div class="rline ms-4"></div>
+    <p class="ach-title ms-4">ACHIEVEMENTS</p>
+    <div class="ach-list bg-white">
+      <div *ngFor="let item of achievements" class="ach-item d-flex align-items-md-center align-items-start">
+        <img [src]="item.imgUrl" alt="{{item.title}}">
+        <div class="ach-details">
+          <h2>{{item.title}}</h2>
+          <p class="fw-bold">{{item.years}}</p>
+          <ul class="mt-2">
+            <li *ngFor="let data of item.details" [innerHTML]="data?.description"></li>
+          </ul>
+        </div>
+      </div>
+      <a class="ach-link mt-3" routerLink="/achievements">Read more...</a>
+      <div class="triangle-down start-50 translate-middle-x"></div>
+  </div>
+  <p class="ach-foot text-center fw-bold mb-0">mediaReach OMD ranks No. 35, the only Media Agency in Jobberman Best 100 companies to work for in Nigeria.</p>
+  </div>
+</div>
+<div #sect10 class="sect-10"></div>
+<div #sect11 id="locations" class="sect-11">
+  <div class="gallery-sect">
+    <div class="rline"></div>
+    <p class="gallery-no mb-0">04</p>
+    <p class="gallery-title">LOCATIONS</p>
+    <app-locations></app-locations>
+  </div>
+</div>
+<div #sect12 class="sect-12">
+</div>
+<div #sect13 id="mediaFacts" class="sect-13">
+  <div class="w-sect">
+    <div class="rline"></div>
+    <p class="mb-0 sect-no">05</p>
+    <p class="sect-title">NIGERIA, WEST & CENTRAL AFRICA MEDIA FACTS</p>
+    <app-media-facts></app-media-facts>
+  </div>
+</div>
+<div #sect14 id="news" class="sect-14">
+  <div class="w-sect">
+    <div class="rline"></div>
+    <p class="mb-0 sect-no">06</p>
+    <p class="sect-title">LATEST NEWS</p>
+    <app-news></app-news>
+  </div>
+</div>
+<div #sect15 id="careers" class="sect-15">
+  <div class="w-sect pt-0 pb-5">
+    <div class="wline"></div>
+    <p class="sect-no mb-0">07</p>
+    <p class="sect-title">CAREERS</p>
+    <app-careers></app-careers>
+  </div>
+</div>
+<div class="sect-16 d-flex flex-column align-items-center justify-content-center position-relative">
+    <p><span class="fw-bold">mediaReach OMD</span> is West and Central Africa's No.1 independent media specialist</p>
+    <div class="rbcard">
+      <div class="rbline"></div>
+    </div>
+</div>
+<div #sect17 id="contact" class="sect-17">
+  <div class="w-sect">
+    <p class="sect-no mb-0">08</p>
+    <p class="sect-title">CONTACT US</p>
+    <div class="d-flex justify-content-between flex-column flex-sm-row">
+      <ul>
+        <li (click)="selectCountry(country.countryName)" *ngFor="let country of countriesList" [class.selected]="country.countryName === selectedCountry">{{country.countryName}}</li>
+      </ul>
+      <div *ngFor="let contact of contacts" [ngClass]="{'selected': contact.countryName === selectedCountry}" class="add-group p-3">
+        <div class="d-flex">
+          <div class="contact-group-1">
+            <p class="contact-head mb-2 fw-bold">ADDRESS</p>
+            <p class="contact-details" [innerHTML]="contact.address"></p>
+          </div>
+          <div class="contact-group-2 overflow-auto">
+            <div>
+              <p class="contact-head mb-2 fw-bold">PHONE NUMBER</p>
+              <p class="contact-details">{{contact.phoneNumber}}</p>
+            </div>
+            <div>
+              <p class="contact-head mb-2 fw-bold">CONTACT PERSON</p>
+              <p class="contact-details">{{contact.contactName}}</p>
+            </div>
+            <div class="">
+              <p class="contact-head mb-2 fw-bold">EMAIL ADDRESS</p>
+              <p class="contact-details">{{contact.emailAddress}}</p>
+            </div>
+          </div>
+          <!-- <div>
+            <p class="contact-head mb-2 fw-bold">EMAIL ADDRESS</p>
+            <p class="contact-details">{{contact.emailAddress}}</p>
+          </div> -->
+        </div>
+        <div class="map-group">
+          <img [src]="contact.imgUrl" alt="{{contact.countryName + 'Address Map'}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

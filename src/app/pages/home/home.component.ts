@@ -1,13 +1,16 @@
-import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
-import { ACHIEVEMENTS } from './helpers/achievements';
-import { CONTACTS } from './helpers/contacts';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ACHIEVEMENTS } from 'src/app/helpers/achievements';
+import { CONTACTS } from 'src/app/helpers/contacts';
+// import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
+// import { ACHIEVEMENTS } from './helpers/achievements';
+// import { CONTACTS } from './helpers/contacts';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css', '../../app.component.css']
 })
-export class AppComponent {
+export class HomeComponent implements OnInit {
   @ViewChild('sect02') sect02: ElementRef | undefined;
   @ViewChild('sect04') sect04: ElementRef | undefined;
   @ViewChild('sect06') sect06: ElementRef | undefined;

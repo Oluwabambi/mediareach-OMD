@@ -1,0 +1,44 @@
+.form-sect {
+    margin-top: 50px;
+    position: relative;
+}
+.form-sect h1 {
+    color: #f3f3f3;
+}
+.form-contain {
+    padding-left: 80px;
+}
+.form-contain .fhead {
+    color: #a1a1a1;
+}
+.form-contain .fhead, .form-contain label, .form-contain input {
+    font-family: 'Ropa Sans', sans-serif;
+}
+.form-contain label {
+    color: #a1a1a1;
+    font-weight: 600;
+    width: 100%;
+}
+.form-contain input {
+    color: #cccccc;
+}
+.form-contain input[type="text"], .form-contain select {
+    color: #cccccc;
+    width: 100%;
+    background-color: #585858;
+    border-radius: 4px;
+    padding: 6px 10px;
+    border: 1px solid #d1d1d1;
+}
+.form-contain input.verify-inp-1 {
+    width: 53%;
+}
+.form-contain input.verify-inp-2 {
+    width: 43%;
+}
+.careers-btn {
+    color: #ffffff;
+    background-color: #c4141e;
+    border: none;
+    padding: 0.65rem;
+}
